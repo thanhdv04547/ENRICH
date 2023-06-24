@@ -1,13 +1,16 @@
-package com.enrich.user;
+package com.enrich.domain.user;
 
 import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.session.RowBounds;
 
 /** UserRepository. */
 @Mapper
 public interface UserRepository {
 
-  List<UserEntity> findAll();
+  List<UserEntity> findAll(String search, RowBounds rowBounds);
+
+  Long countFindAll(String search);
 
   UserEntity findById(String userId);
 

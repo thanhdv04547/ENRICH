@@ -1,6 +1,6 @@
-package com.enrich.user.create;
+package com.enrich.domain.user.create;
 
-import com.enrich.user.UserRepository;
+import com.enrich.domain.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,6 +1,6 @@
-package com.enrich.user.delete;
+package com.enrich.domain.user.delete;
 
-import com.enrich.user.UserRepository;
+import com.enrich.domain.user.UserRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

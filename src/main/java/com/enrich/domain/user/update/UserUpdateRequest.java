@@ -1,4 +1,4 @@
-package com.enrich.user.update;
+package com.enrich.domain.user.update;
 
 import lombok.Data;
 

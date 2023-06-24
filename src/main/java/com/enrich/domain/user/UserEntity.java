@@ -1,4 +1,4 @@
-package com.enrich.user;
+package com.enrich.domain.user;
 
 import lombok.Data;
 

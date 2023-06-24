@@ -1,4 +1,4 @@
-package com.enrich.user.delete;
+package com.enrich.domain.user.delete;
 
 import java.util.List;
 import lombok.RequiredArgsConstructor;

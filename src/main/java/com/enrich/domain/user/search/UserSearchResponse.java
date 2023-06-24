@@ -1,6 +1,6 @@
-package com.enrich.user.search;
+package com.enrich.domain.user.search;
 
-import com.enrich.user.UserEntity;
+import com.enrich.domain.user.UserEntity;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
