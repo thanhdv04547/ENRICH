@@ -4,6 +4,8 @@ import com.enrich.common.PagingResponse;
 import lombok.RequiredArgsConstructor;
 import org.apache.ibatis.session.RowBounds;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,10 +22,11 @@ public class UserSearchController {
   private final UserSearchService userSearchService;
 
   @GetMapping()
+  @PreAuthorize("hasAuthority('ROLE_ADMIN')")
   public ResponseEntity<PagingResponse<UserSearchResponse>> search(
-      @RequestBody UserSearchRequest userSearchRequest,
-      @RequestParam(defaultValue = "0") int page,
-      @RequestParam(defaultValue = "20") int size) {
+          @RequestBody UserSearchRequest userSearchRequest,
+          @RequestParam(defaultValue = "0") int page,
+          @RequestParam(defaultValue = "20") int size, Authentication authentication) {
     RowBounds rowBounds = new RowBounds(page * size, size);
     return ResponseEntity.ok(userSearchService.findAll(userSearchRequest, rowBounds));
   }
